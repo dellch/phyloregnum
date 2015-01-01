@@ -1,0 +1,24 @@
+development:
+  adapter: mysql2
+  database: phyloregnum
+  username: phylouser
+  password: phylopass
+  encoding: utf8
+  host: localhost
+  
+test:
+  adapter: mysql2
+  database: phyloregnum_test
+  username: phylouser
+  password: phylopass
+  encoding: utf8
+  host: localhost
+
+production:
+  adapter: mysql2
+  database: phyloregnum
+  username: phylouser
+  #password: 2roku3nad
+  password: phylopass
+  encoding: utf8
+  host: localhost
