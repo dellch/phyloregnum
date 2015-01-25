@@ -24,7 +24,7 @@ gem "recaptcha", :require => "recaptcha/rails"
 gem 'rufus-scheduler'
 gem 'nokogiri'
 gem 'meta_where'
-gem 'activerecord-import', '~>0.2.0'
+gem 'activerecord-import'#, '~>0.2.0'
 group :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
