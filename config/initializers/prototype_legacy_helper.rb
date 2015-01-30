@@ -1,1 +1,1 @@
-require 'prototype_legacy_helper'
+require File.dirname(__FILE__) + '/lib/prototype_legacy_helper'
