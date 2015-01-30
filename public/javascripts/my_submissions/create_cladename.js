@@ -290,7 +290,6 @@ function Phyloregnum(){
             //set save action
             submission.subaction = ''
             ///ko key mapping
-            debugger
             pr.submissionModel = ko.mapping.fromJS(submission,pr.ko.mapping)
             jQuery.each(pr.submissionModel, function(k,v){
                 

@@ -43,5 +43,9 @@ module Regnum
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+
+    # rails 3.1.12 assets stuff
+    config.assets.enabled = false
+    config.assets.version = '1.0'
   end
 end
