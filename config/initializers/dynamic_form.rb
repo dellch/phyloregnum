@@ -1,1 +1,1 @@
-require File.dirname(__FILE__) + '/lib/dynamic_form'
+require Rails.root.to_s + '/lib/dynamic_form/dynamic_form'

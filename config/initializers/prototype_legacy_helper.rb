@@ -1,1 +1,1 @@
-require File.dirname(__FILE__) + '/lib/prototype_legacy_helper'
+require Rails.root.to_s + '/lib/prototype_legacy_helper/prototype_legacy_helper'
