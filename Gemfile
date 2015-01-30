@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 source 'http://gems.github.com'
 #source 'https://github.com/mislav/will_paginate.git'
 
-gem 'rails', '3.1.12'#'3.0.3'
+gem 'rails', '3.2.21'#'3.1.12'#'3.0.3'
 gem 'bcrypt-ruby', :require => "bcrypt"
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -29,8 +29,8 @@ group :test do
   gem 'factory_girl_rails'
 end
 group :assets do
-  gem 'sass-rails',   '~> 3.1.7'
-  gem 'coffee-rails', '~> 3.1.1'
+  gem 'sass-rails',   '~> 3.2.6'#'~> 3.1.7'
+  gem 'coffee-rails', '~> 3.2.2'#'~> 3.1.1'
   gem 'uglifier',     '>= 1.0.3'
 end
 #gem 'rmagick', '2.12.0'
