@@ -205,7 +205,10 @@ class OntologiesController < ApplicationController
 
                 # create and save db relationship term if not encountered before
                 if term_id.nil? and !term_str.nil?
-                  term_id = RelationshipTerm.find_or_create_by_term_and_super_sub(term_str, rel[:super_sub]).id
+                  ##DEPRECATED IN RAILS 4###
+                  #term_id = RelationshipTerm.find_or_create_by_term_and_super_sub(term_str, rel[:super_sub]).id
+                  ###REPLACE WITH
+                  term_id = RelationshipTerm.find_or_create_by(:term => term_str, :super_sub => rel[:super_sub]).id
                   term_to_id[term_str + rel[:super_sub].to_s] = term_id
                 end
 

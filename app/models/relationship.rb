@@ -8,9 +8,10 @@ class Relationship < ActiveRecord::Base
 
   belongs_to :relationship_term, :inverse_of => :relationships#, :class_name => "RelationshipTerm", :foreign_key => "to"
 
-  scope :with_terms, joins(:relationship_term, "INNER JOIN ontology_terms ON ontology_relationships.to_concept_id = ontology_terms.concept_id").
+  scope :with_terms, -> {
+    joins(:relationship_term, "INNER JOIN ontology_terms ON ontology_relationships.to_concept_id = ontology_terms.concept_id").
       select("ontology_relationships.to_concept_id, ontology_terms.term as con_term, ontology_relationship_terms.term as rel_term, ontology_relationship_terms.super_sub").
       where("ontology_terms.preferred").
-      order("rel_term, con_term")
+      order("rel_term, con_term")}
 
 end

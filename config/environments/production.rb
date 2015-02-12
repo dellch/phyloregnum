@@ -55,7 +55,10 @@ Regnum::Application.configure do
 
   #rails 3.1.12
       # Compress JavaScripts and CSS
-    config.assets.compress = true
+    #rails 3 deprecation
+    # config.assets.compress = true
+    #new rails 4
+    #TODO  config.assets.js_compressor = :something
 
     # Don't fallback to assets pipeline if a precompiled asset is missed
     config.assets.compile = false

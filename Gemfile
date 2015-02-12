@@ -13,6 +13,7 @@ gem 'mysql2', '>=0.3'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 gem 'debugger'
 gem 'nokogiri'
+gem 'protected_attributes'
 
 gem 'will_paginate'
 gem "paperclip"
@@ -24,15 +25,15 @@ gem "recaptcha", :require => "recaptcha/rails"
 gem 'rufus-scheduler'
 #gem 'meta_where'  RAILS 3.1.12 doesn't support
 gem 'activerecord-import'#, '~>0.2.0'
-group :test do
+# group :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
-end
-group :assets do
+# end
+# group :assets do
   gem 'sass-rails',   '~> 3.2.6'#'~> 3.1.7'
   gem 'coffee-rails', '~> 3.2.2'#'~> 3.1.1'
   gem 'uglifier',     '>= 1.0.3'
-end
+# end
 #gem 'rmagick', '2.12.0'
 
 
