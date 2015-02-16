@@ -74,4 +74,7 @@ Regnum::Application.configure do
 
     # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
     # config.force_ssl = true
+
+  #eager loading rails 4
+  config.eager_load = true
 end
