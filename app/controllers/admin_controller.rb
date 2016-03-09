@@ -77,7 +77,10 @@ class AdminController < ApplicationController
     if request.xhr?
       render :partial => partial, :layout => false
     else
-      redirect_to :action => :index
+      render :partial => partial, :layout => false
+
+
+      # redirect_to :action => :index
     end
 
   end

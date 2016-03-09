@@ -13,12 +13,12 @@
         %td= user.enabled
         %td= user.last_login
         %td
-          =form_for user, :url => '/admin/users/'+ user.id.to_s+'?user_action=edit' do |s|
+          =form_for user, :method => :get, :url => '/admin/users/'+ user.id.to_s+'?user_action=edit' do |s|
             %input.submit_button{:type => 'submit', :value => 'edit', :title => 'click to edit'}
         -if user.id != session[:user_id]
           %td
             - user.enabled ? enb = 'disable' : enb = 'enable'
-            =form_for user, :url => '/admin/users/'+ user.id.to_s+'?user_action='+enb do |s|
+            =form_for user, :method => :put, :url => '/admin/users/'+ user.id.to_s+'?user_action='+enb do |s|
               %input.submit_button{:type => 'submit', :value => enb, :title => 'click to '+enb}
           %td
             =form_for user, :url => '/admin/users/'+ user.id.to_s+'?user_action=delete' do |s|
