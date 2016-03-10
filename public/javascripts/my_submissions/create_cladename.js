@@ -284,8 +284,8 @@ function Phyloregnum(){
     this.loadSubmission = function(id){
         jQuery('#submission_id').val(id)
         jQuery.getJSON('/my_submission/'+id,function(response){
-            var submission = response.submission
-            ///
+            var submission = response.submission ? response.submission : response;
+
             submission.submission_id = id
             //set save action
             submission.subaction = ''
@@ -298,7 +298,7 @@ function Phyloregnum(){
                 }
             })
             
-            ko.applyBindings(pr.submissionModel, document.getElementById('content'))
+            ko.applyBindings(pr.submissionModel, document.getElementById('new-cladename-content'))
 
             jQuery('.temp-id').html(parseInt(id).pad(10));
            

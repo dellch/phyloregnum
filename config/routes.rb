@@ -31,7 +31,7 @@ Regnum::Application.routes.draw do
   match '/my_submission/add_attachment' => 'my_submission#add_attachment', :as => :add_attachment, via: :post
   match '/my_submission/view_attachment/:id' => 'my_submission#view_attachment', :as => :view_attachment, via: :get
   match '/my_submission/remove_attachment/:id' => 'my_submission#remove_attachment', :as => :remove_attachment, via: :get
-  match '/my_submission/delete/:id' => 'my_submission#delete', :as => :delete, via: :post
+  match '/my_submission/delete/:id' => 'my_submission#delete', :as => :delete, via: :delete
   #this one comes last so my_submission method calls can pass
   match '/my_submission/:id' => 'my_submission#show', :as => :show_my_submission, via: :get
   match '/templates/load' => 'templates#load', :as => :load_template, via: :get

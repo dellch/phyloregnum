@@ -15,11 +15,11 @@
               %input.submit_button{:type => 'submit', :value => 'view'}    
           %td{ :style => 'width:40px'}
             -if !sub.status.eq?('approved')  && !sub.status.eq?('rejected')  && !sub.status.eq?('submitted')       
-              =form_for sub, :url => '/my_submission/'+ sub.id.to_s do |s|
+              =form_for sub, :method => :get, :url => '/my_submission/'+ sub.id.to_s do |s|
                 %input.submit_button{:type => 'submit', :value => 'edit', :title => 'click to edit'}
           %td{ :style => 'width:50px'}  
             -if !sub.status.eq?('approved')  && !sub.status.eq?('rejected')  && !sub.status.eq?('submitted')  
-              =form_for sub, :url => '/my_submission/delete/'+ sub.id.to_s do |s|
+              =form_for sub, :method => :delete, :url => '/my_submission/delete/'+ sub.id.to_s do |s|
                 %input.submit_button{:type => 'submit', :value => 'delete', :title => 'click to delete'}
       %tr
         %td{:colspan => 5, :style => 'text-align:center;border:none'}= will_paginate(@subs, :renderer => RemoteLinkRenderer, :container => false,          :params => {:controller => :my_submission, :action => nil}) 
