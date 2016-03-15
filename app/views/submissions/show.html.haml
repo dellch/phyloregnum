@@ -3,7 +3,7 @@
 .submission-holder{:style => 'float:left;clear:both;'}
   =render :partial => 'shared/cladename_view'
 .editor-box
-  -form_for @sub, :url => '/submissions/'+@sub.id.to_s, :method => :put do |s|
+  =form_for @sub, :url => '/submissions/'+@sub.id.to_s, :method => :put do |s|
     %table
       %tr
         %td.name Status:
@@ -18,6 +18,3 @@
       %tr
         %td{:colspan => '2'}
           %textarea{ :name => 'editor_comments', :rows => 5, :cols => 87 }
-
-
-
