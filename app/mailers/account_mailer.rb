@@ -3,11 +3,11 @@ class AccountMailer < ActionMailer::Base
 
   def account_created(user)
   	@user = user
-    mail(:to => @user.email, :bcc => 'gtraub@ufl.edu' , :subject => ('Account Created on Phyloregnum!')) 
+    mail(:to => @user.email, :bcc => 'cdell@flmnh.ufl.edu,ncellinese@flmnh.ufl.edu,chrisdell@gmail.com' , :subject => ('Account Created on Phyloregnum!'))
   end
 
   def account_activated(user)
   	@user = user
-  	mail(:to => @user.email, :bcc => 'gtraub@ufl.edu', :subject => ('Your Phyloregnum account is active!'))
+  	mail(:to => @user.email, :bcc => 'cdell@flmnh.ufl.edu,ncellinese@flmnh.ufl.edu,chrisdell@gmail.com', :subject => ('Your Phyloregnum account is active!'))
   end
 end
