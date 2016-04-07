@@ -32,7 +32,7 @@ class AccountsController < ApplicationController
       if !current_user.nil? && current_user.is_admin?
         redirect_to :controller => :admin, :action => :index
       else
-        
+
         redirect_to :login
       end
     else

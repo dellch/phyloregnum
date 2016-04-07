@@ -136,7 +136,7 @@ module Restful
         def handle_save_search(object, search_params)
           if(params[:tag] && params[:tag][:save] && params[:tag][:name].strip != "")
             saved_search = object.save_search(search_params, current_project, current_user, params[:tag][:name])
-            flash[:notice] = "Search Saved as Tag: #{ params[:tag][:name]}"
+            flash["notice"] = "Search Saved as Tag: #{ params[:tag][:name]}"
           end
         end
 
@@ -183,7 +183,7 @@ module Restful
             format.json { head :ok }
             format.xml  { head :ok }
             format.html {
-              flash[:notice] = 'Saved successfully.'
+              flash["notice"] = 'Saved successfully.'
               redirect_to :back
             }
           end

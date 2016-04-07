@@ -22,7 +22,7 @@ jQuery(document).ready(function(){
                         }
                         break
                     case 'edit':
-                        event.target.form.submit() 
+                        event.target.form.submit()
                         break
                     case 'view':
                         var action = event.target.form.action

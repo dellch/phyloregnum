@@ -41,7 +41,7 @@ Regnum::Application.routes.draw do
   #
   # match '/admin/users/:id' => 'admin#index', via: :get
   match '/admin/users/:id' => 'admin#edit_user', via: [:get,:put]
-  match '/admin/update_user/:id' => 'admin#update_user', :as => :update_user, via: :post
+  match '/admin/update_user/:id' => 'admin#update_user', :as => :update_user, via: [:patch]
   #
   match '/phenotypes' => 'phenotypes#index', :as => :phenotypes, via: :get
   match '/phenotypes/create' => 'phenotypes#create', via: :post
