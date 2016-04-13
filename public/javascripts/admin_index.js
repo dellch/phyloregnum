@@ -58,7 +58,7 @@ jQuery(document).ready(function(){
 
             jQuery('#user_window_content form').ajaxSubmit( function(response){
                 jQuery('#user_window').hide()
-                jQuery('#users_table_div').html(response)
+                jQuery('#user-table-holder').html(response)
             })
         }
     })
