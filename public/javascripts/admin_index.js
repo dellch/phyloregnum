@@ -36,9 +36,7 @@ jQuery(document).ready(function(){
 
                           break
                       case 'delete':
-                          if(confirm("Are you sure you want to delete this user?")){
-                              jQuery('.sortable-table-holder').html(response)
-                          }
+                          jQuery('.sortable-table-holder').html(response)
                           break
                       case 'disable':
                           jQuery('#user-table-holder').html(response)
