@@ -26,7 +26,7 @@ jQuery(document).ready(function(){
                               buttons: [
                                   {text: 'Save', click: function(){
                                       jQuery('#float-window-content-holder form').ajaxSubmit( function(response){
-                                         jQuery('#users_table_div').html(response)
+                                         jQuery('#users-table-holder').html(response)
                                          jQuery.closeFloatWindow()
                                       })
                                   }}
@@ -49,17 +49,6 @@ jQuery(document).ready(function(){
               }
               break
 
-        }
-    })
-
-    jQuery('#user_window_content').click(function(event){
-        event.preventDefault()
-        if(event.target.attributes.type.value === 'submit'){
-
-            jQuery('#user_window_content form').ajaxSubmit( function(response){
-                jQuery('#user_window').hide()
-                jQuery('#user-table-holder').html(response)
-            })
         }
     })
 })
