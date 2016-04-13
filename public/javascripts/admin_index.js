@@ -26,7 +26,7 @@ jQuery(document).ready(function(){
                               buttons: [
                                   {text: 'Save', click: function(){
                                       jQuery('#float-window-content-holder form').ajaxSubmit( function(response){
-                                         jQuery('#users-table-holder').html(response)
+                                         jQuery('#user-table-holder').html(response)
                                          jQuery.closeFloatWindow()
                                       })
                                   }}
