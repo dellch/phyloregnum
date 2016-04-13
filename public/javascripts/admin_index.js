@@ -10,40 +10,46 @@ jQuery(document).ready(function(){
         event.preventDefault()
         switch(event.target.tagName.toLowerCase()){
             case 'input':
+              var button = event.target.value
+                , do_it = true;
+              if (button == "delete"){
+                do_it = confirm("Are you sure you want to delete this user?")
+              }
+              if (do_it){
                 jQuery(event.target.form).ajaxSubmit(function(response){
-                    var button = event.target.value
-                    switch(button){
-                        case 'edit':
-                            var opts = {
-                                width: 300,
-                                height: 500,
-                                title: 'Edit User',
-                                buttons: [
-                                    {text: 'Save', click: function(){
-                                        jQuery('#float-window-content-holder form').ajaxSubmit( function(response){
-                                           jQuery('#users_table_div').html(response)
-                                           jQuery.closeFloatWindow()
-                                        })
-                                    }} 
-                                ]
-                            }
-                            jQuery.openFloatWindow(response,opts)
+                  switch(button){
+                      case 'edit':
+                          var opts = {
+                              width: 300,
+                              height: 500,
+                              title: 'Edit User',
+                              buttons: [
+                                  {text: 'Save', click: function(){
+                                      jQuery('#float-window-content-holder form').ajaxSubmit( function(response){
+                                         jQuery('#users_table_div').html(response)
+                                         jQuery.closeFloatWindow()
+                                      })
+                                  }}
+                              ]
+                          }
+                          jQuery.openFloatWindow(response,opts)
 
-                            break
-                        case 'delete':
-                            if(confirm("Are you sure you want to delete this user?")){
-                                jQuery('.sortable-table-holder').html(response)
-                            }
-                            break
-                        case 'disable':
-                            jQuery('#user-table-holder').html(response)
-                            break
-                        case 'enable':
-                            jQuery('#user-table-holder').html(response)
-                            break
-                    }
+                          break
+                      case 'delete':
+                          if(confirm("Are you sure you want to delete this user?")){
+                              jQuery('.sortable-table-holder').html(response)
+                          }
+                          break
+                      case 'disable':
+                          jQuery('#user-table-holder').html(response)
+                          break
+                      case 'enable':
+                          jQuery('#user-table-holder').html(response)
+                          break
+                  }
                 })
-                break
+              }
+              break
 
         }
     })
